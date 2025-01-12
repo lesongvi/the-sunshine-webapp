@@ -4,6 +4,11 @@
 -   Project này sẽ sử dụng Laravel 11.x làm backend và VueJS làm frontend.
 -   Hướng dẫn rất chi tiết từng bước cài đặt và chạy project.
 
+## Hướng dẫn các phần mềm liên quan
+
+-   [Hướng dẫn cơ bản VSCode](/docs/vscode.md)
+-   [Cài đặt tiện ích mở rộng VSCode](/docs/vscode-extensions.md)
+
 ## Cài đặt sơ khai
 
 -   Chỉ cần làm một lần lúc khởi tạo dự án từ đầu, nếu clone project từ git về thì không cần làm bước này
@@ -74,3 +79,5 @@ npm install
 composer run dev
 echo tachdepgai:
 ```
+
+-   Sau khi chạy lệnh trên trong Terminal, mở trình duyệt và truy cập vào địa chỉ [http://localhost:8001](http://localhost:8001) để xem project.
