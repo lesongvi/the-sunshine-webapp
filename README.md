@@ -31,6 +31,16 @@ laravel new the-sunshine-webapp
 -   Sử dụng Inertia.js và Vue.js làm Jetsream stack
 -   Chọn cài đặt sẵn feature API support, Dark mode, Email verification
 
+## Cài đặt thư viện
+
+### Cài đặt vendor cho Laravel
+
+-   Lệnh sau sẽ cài đặt các thư viện cần thiết cho Backend:
+
+```bash
+composer install
+```
+
 ### Databases và Migrations
 
 -   Sau khi cài đặt Laravel, cấu hình thông tin database trong file `.env` để webapp có thể kết nối với database.
@@ -53,14 +63,10 @@ $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = '';
 ```
 
-## Cài đặt thư viện
-
-### Cài đặt vendor cho Laravel
-
--   Lệnh sau sẽ cài đặt các thư viện cần thiết cho Backend:
+-   Sau khi setup xong database, chạy lệnh sau để tạo bảng trong database:
 
 ```bash
-composer install
+php artisan migrate
 ```
 
 ### Cài đặt node modules cho Inertia.js và Vue.js
