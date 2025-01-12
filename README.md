@@ -82,7 +82,9 @@ echo tachdepgai:
 
 -   Sau khi chạy lệnh trên trong Terminal, mở trình duyệt và truy cập vào địa chỉ [http://localhost:8001](http://localhost:8001) để xem project.
 
-## Cấu trúc thư mục
+## Cấu trúc project
+
+### Cấu trúc thư mục
 
 -   the-sunshine-webapp
     -   app: Thư mục chứa mã nguồn PHP của Laravel
@@ -102,23 +104,27 @@ echo tachdepgai:
     -   storage: Thư mục chứa các file tạm của ứng dụng, bao gồm file cache, session, logs... -> Thư mục này không cần quan tâm, Laravel sẽ tự quản lý
     -   tests: Thư mục chứa các file test của ứng dụng, bao gồm các file test Unit, Feature, Pest, TestCase...
     -   vendor: Thư mục chứa các thư viện của ứng dụng, bao gồm các thư viện PHP, JS, CSS... -> Thư mục này không cần quan tâm, Laravel sẽ tự quản lý
+
+### Cấu trúc các file (project root folder)
+
+-   the-sunshine-webapp
     -   .env: File cấu hình môi trường của ứng dụng, chứa các thông tin nhạy cảm như thông tin database, thông tin mail, thông tin API...
     -   .env.example: File mẫu cấu hình môi trường của ứng dụng, chứa các thông tin mẫu, không chứa thông tin nhạy cảm -> File này không cần quan tâm
     -   .gitignore: File chứa danh sách các file, thư mục không muốn đưa lên Git. Ví dụ: .env, vendor, node_modules...
+    -   .gitattributes: File cấu hình cho Git, chứa thông tin về cách xử lý file khi commit, merge...
+    -   .editorconfig: File cấu hình cho Editor, chứa thông tin về cách format code, cách hiển thị tab, space...
     -   artisan: File thực thi các lệnh Artisan, dùng để tạo mới Controller, Model, Migration, Seeder...
     -   composer.json: File cấu hình Composer, chứa thông tin về các thư viện PHP cần cài đặt cho ứng dụng
     -   composer.lock: File chứa thông tin chi tiết về các thư viện PHP đã cài đặt, thường thi file này được tự quản lý bởi Composer
     -   jsconfig.json: File cấu hình cho JavaScript trong ứng dụng
-    -   LICENSE: File chứa thông tin về giấy phép sử dụng ứng dụng, chúng ta sử dụng giấy phép GNU GPL v3
-    -   package-lock.json: File chứa thông tin chi tiết về các thư viện JS đã cài đặt, thường thi file này được tự quản lý bởi npm
     -   package.json: File cấu hình cho npm, chứa thông tin về các thư viện JS cần cài đặt cho ứng dụng
+    -   package-lock.json: File chứa thông tin chi tiết về các thư viện JS đã cài đặt, thường thi file này được tự quản lý bởi npm
     -   phpunit.xml: File cấu hình cho PHPUnit, chứa thông tin về các file test, các file test coverage...
     -   postcss.config.js: File cấu hình cho PostCSS, chứa thông tin về các plugin PostCSS cần sử dụng
-    -   README.md: File chứa thông tin giới thiệu về ứng dụng, hướng dẫn cài đặt, hướng dẫn sử dụng...
     -   tailwind.config.js: File cấu hình cho TailwindCSS, chứa thông tin về các plugin TailwindCSS cần sử dụng
     -   vite.config.js: File cấu hình cho Vite, chứa thông tin về các plugin Vite cần sử dụng
-    -   .editorconfig: File cấu hình cho Editor, chứa thông tin về cách format code, cách hiển thị tab, space...
-    -   .gitattributes: File cấu hình cho Git, chứa thông tin về cách xử lý file khi commit, merge...
+    -   LICENSE: File chứa thông tin về giấy phép sử dụng ứng dụng, chúng ta sử dụng giấy phép GNU GPL v3
+    -   README.md: File chứa thông tin giới thiệu về ứng dụng, hướng dẫn cài đặt, hướng dẫn sử dụng...
 
 ### Cấu trúc thư mục resources
 
