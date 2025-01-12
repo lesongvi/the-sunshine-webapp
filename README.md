@@ -53,6 +53,12 @@ $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = '';
 ```
 
+-   Sau khi setup xong database, chạy lệnh sau để tạo bảng trong database:
+
+```bash
+php artisan migrate
+```
+
 ## Cài đặt thư viện
 
 ### Cài đặt vendor cho Laravel
