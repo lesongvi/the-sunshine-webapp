@@ -31,6 +31,23 @@ laravel new the-sunshine-webapp
 -   Sử dụng Inertia.js và Vue.js làm Jetsream stack
 -   Chọn cài đặt sẵn feature API support, Dark mode, Email verification
 
+## Lưu ý về PHP
+
+### Phiên bản PHP
+- Sử dụng phiên bản PHP 8.2.x
+
+### Cài đặt CA cert
+- Tải file [cacert.pem](https://curl.se/ca/cacert.pem) và cài đặt cacert trong php.ini
+```ini
+cacert=<absolute path to cacert.pem>
+```
+
+### Extension PHP cần thiết
+- php_openssl
+- php_fileinfo
+- zip
+- pcntl (không cài trên Windows được theo tài liệu của PHP)
+
 ## Cài đặt thư viện
 
 ### Cài đặt vendor cho Laravel
@@ -69,6 +86,11 @@ $cfg['Servers'][$i]['password'] = '';
 php artisan migrate
 ```
 
+- Tạo khóa mã hóa
+```bash
+php artisan key:generate
+```
+
 ### Cài đặt node modules cho Inertia.js và Vue.js
 
 -   Lệnh sau sẽ cài đặt các thư viện cần thiết cho Frontend:
@@ -86,7 +108,7 @@ composer run dev
 echo tachdepgai:
 ```
 
--   Sau khi chạy lệnh trên trong Terminal, mở trình duyệt và truy cập vào địa chỉ [http://localhost:8001](http://localhost:8001) để xem project.
+-   Sau khi chạy lệnh trên trong Terminal, mở trình duyệt và truy cập vào địa chỉ [http://localhost:80](http://localhost:80) để xem project.
 
 ## Cấu trúc project
 
