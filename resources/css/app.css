@@ -1,7 +1,16 @@
+/**
+Ở đây chúng ta có thể thêm các class css mà chúng ta muốn sử dụng trong webapp của mình.
+Những class này sẽ được tải trên tất cả các trang.
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 [x-cloak] {
     display: none;
+}
+
+.bg-dark {
+    background-color: #000000;
 }
