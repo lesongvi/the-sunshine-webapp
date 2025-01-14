@@ -34,19 +34,23 @@ laravel new the-sunshine-webapp
 ## Lưu ý về PHP
 
 ### Phiên bản PHP
-- Sử dụng phiên bản PHP 8.2.x
+
+-   Sử dụng phiên bản PHP 8.2.x
 
 ### Cài đặt CA cert
-- Tải file [cacert.pem](https://curl.se/ca/cacert.pem) và cài đặt cacert trong php.ini
+
+-   Tải file [cacert.pem](https://curl.se/ca/cacert.pem) và cài đặt cacert trong php.ini
+
 ```ini
 cacert=<absolute path to cacert.pem>
 ```
 
 ### Extension PHP cần thiết
-- php_openssl
-- php_fileinfo
-- zip
-- pcntl (không cài trên Windows được theo tài liệu của PHP)
+
+-   php_openssl
+-   php_fileinfo
+-   zip
+-   pcntl (không cài trên Windows được theo tài liệu của PHP)
 
 ## Cài đặt thư viện
 
@@ -86,7 +90,8 @@ $cfg['Servers'][$i]['password'] = '';
 php artisan migrate
 ```
 
-- Tạo khóa mã hóa
+-   Tạo khóa mã hóa
+
 ```bash
 php artisan key:generate
 ```
@@ -136,34 +141,70 @@ echo tachdepgai:
 ### Cấu trúc các file (project root folder)
 
 -   **the-sunshine-webapp**
-    -   ***.env*** (Environment): File cấu hình môi trường của ứng dụng, chứa các thông tin nhạy cảm như thông tin database, thông tin mail, thông tin API...
-    -   ***.env.example***: File mẫu cấu hình môi trường của ứng dụng, chứa các thông tin mẫu, không chứa thông tin nhạy cảm -> File này không cần quan tâm
-    -   ***.gitignore***: File chứa danh sách các file, thư mục không muốn đưa lên Git. Ví dụ: .env, vendor, node_modules...
-    -   ***.gitattributes***: File cấu hình cho Git, chứa thông tin về cách xử lý file khi commit, merge...
-    -   ***.editorconfig***: File cấu hình cho Editor, chứa thông tin về cách format code, cách hiển thị tab, space...
-    -   ***artisan***: File thực thi các lệnh Artisan, dùng để tạo mới Controller, Model, Migration, Seeder...
-    -   ***composer.json***: File cấu hình Composer, chứa thông tin về các thư viện PHP cần cài đặt cho ứng dụng
-    -   ***composer.lock***: File chứa thông tin chi tiết về các thư viện PHP đã cài đặt, thường thi file này được tự quản lý bởi Composer
-    -   ***jsconfig.json***: File cấu hình cho JavaScript trong ứng dụng
-    -   ***package.json***: File cấu hình cho npm, chứa thông tin về các thư viện JS cần cài đặt cho ứng dụng
-    -   ***package-lock.json***: File chứa thông tin chi tiết về các thư viện JS đã cài đặt, thường thi file này được tự quản lý bởi npm
-    -   ***phpunit.xml***: File cấu hình cho PHPUnit, chứa thông tin về các file test, các file test coverage...
-    -   ***postcss.config.js***: File cấu hình cho PostCSS, chứa thông tin về các plugin PostCSS cần sử dụng
-    -   ***tailwind.config.js***: File cấu hình cho TailwindCSS, chứa thông tin về các plugin TailwindCSS cần sử dụng
-    -   ***vite.config.js***: File cấu hình cho Vite, chứa thông tin về các plugin Vite cần sử dụng
-    -   ***LICENSE***: File chứa thông tin về giấy phép sử dụng ứng dụng, chúng ta sử dụng giấy phép GNU GPL v3
-    -   ***README.md***: File chứa thông tin giới thiệu về ứng dụng, hướng dẫn cài đặt, hướng dẫn sử dụng...
+    -   **_.env_** (Environment): File cấu hình môi trường của ứng dụng, chứa các thông tin nhạy cảm như thông tin database, thông tin mail, thông tin API...
+    -   **_.env.example_**: File mẫu cấu hình môi trường của ứng dụng, chứa các thông tin mẫu, không chứa thông tin nhạy cảm -> File này không cần quan tâm
+    -   **_.gitignore_**: File chứa danh sách các file, thư mục không muốn đưa lên Git. Ví dụ: .env, vendor, node_modules...
+    -   **_.gitattributes_**: File cấu hình cho Git, chứa thông tin về cách xử lý file khi commit, merge...
+    -   **_.editorconfig_**: File cấu hình cho Editor, chứa thông tin về cách format code, cách hiển thị tab, space...
+    -   **_artisan_**: File thực thi các lệnh Artisan, dùng để tạo mới Controller, Model, Migration, Seeder...
+    -   **_composer.json_**: File cấu hình Composer, chứa thông tin về các thư viện PHP cần cài đặt cho ứng dụng
+    -   **_composer.lock_**: File chứa thông tin chi tiết về các thư viện PHP đã cài đặt, thường thi file này được tự quản lý bởi Composer
+    -   **_jsconfig.json_**: File cấu hình cho JavaScript trong ứng dụng
+    -   **_package.json_**: File cấu hình cho npm, chứa thông tin về các thư viện JS cần cài đặt cho ứng dụng
+    -   **_package-lock.json_**: File chứa thông tin chi tiết về các thư viện JS đã cài đặt, thường thi file này được tự quản lý bởi npm
+    -   **_phpunit.xml_**: File cấu hình cho PHPUnit, chứa thông tin về các file test, các file test coverage...
+    -   **_postcss.config.js_**: File cấu hình cho PostCSS, chứa thông tin về các plugin PostCSS cần sử dụng
+    -   **_tailwind.config.js_**: File cấu hình cho TailwindCSS, chứa thông tin về các plugin TailwindCSS cần sử dụng
+    -   **_vite.config.js_**: File cấu hình cho Vite, chứa thông tin về các plugin Vite cần sử dụng
+    -   **_LICENSE_**: File chứa thông tin về giấy phép sử dụng ứng dụng, chúng ta sử dụng giấy phép GNU GPL v3
+    -   **_README.md_**: File chứa thông tin giới thiệu về ứng dụng, hướng dẫn cài đặt, hướng dẫn sử dụng...
 
 ### Cấu trúc thư mục resources
 
 -   **resources**
     -   **css**: Thư mục chứa các file CSS của ứng dụng, để trang trí giao diện
-        -   ***app.css***
+        -   **_app.css_**
     -   **js**: Thư mục chứa các file JS của ứng dụng, để xử lý logic, cho người dùng tương tác trực tiếp với ứng dụng
         -   **Components**: Thư mục chứa các Components VueJS, mỗi Component là một file .vue, chứa HTML, CSS, JS. Trong một trang web sẽ có nhiều thành phần nhỏ, mỗi thành phần nhỏ sẽ được tách ra thành một Component riêng, ví dụ như Header (phần đầu trang), Footer (phần cuối trang), Sidebar (phần bên trái hoặc bên phải trang)...
         -   **Layouts**: Thư mục chứa các Layouts VueJS, mỗi Layout là một file .vue, chứa HTML, CSS, JS. Layout là cấu trúc chung của một trang web và sẽ chứa những component được sử dụng chung cho nhiều trang, ví dụ như Header, Footer, Sidebar... (những component này đều cần được hiển thị ở mọi trang)
         -   **Pages**: Thư mục chứa các Pages VueJS, mỗi Page là một file .vue, chứa HTML, CSS, JS. Page là trang web mà người dùng sẽ thấy, nó sẽ chứa nhiều components và layout. Mỗi trang sẽ có một URL riêng và có thể chứa những component khác nhau, ví dụ như /index (trang chủ) sẽ chứa component danh sách bài viết, /post (trang bài viết) sẽ chứa component chi tiết bài viết...
-        -   ***app.js***: File chứa mã nguồn JS chính của ứng dụng, nó sẽ import các file JS khác, khởi tạo ứng dụng VueJS
-        -   ***bootstrap.js***: File chứa mã nguồn JS khởi tạo ứng dụng, nó sẽ import các thư viện cần thiết cho ứng dụng
+        -   **_app.js_**: File chứa mã nguồn JS chính của ứng dụng, nó sẽ import các file JS khác, khởi tạo ứng dụng VueJS
+        -   **_bootstrap.js_**: File chứa mã nguồn JS khởi tạo ứng dụng, nó sẽ import các thư viện cần thiết cho ứng dụng
     -   **markdown**: Thư mục chứa các file Markdown, dùng để viết tài liệu, hướng dẫn, giải thích... Thường thì bạn không cần quan tâm đến thư mục này
     -   **views**: Thư mục chứa các file Blade templates, dùng để hiển thị giao diện cho người dùng, Blade template là một công nghệ template engine của Laravel, nó cho phép chúng ta viết mã PHP trong file HTML, thường thì chúng ta sẽ ít sử dụng Blade template vì chúng ta đã sử dụng VueJS để xử lý giao diện. Giao diện sẽ được tải một lần duy nhất khi truy cập trang web, sau đó sẽ không cần tải lại trang web mỗi khi người dùng tương tác với ứng dụng. Nếu chúng ta phát triển email, thì có thể sử dụng Blade template để tạo nội dung email.
+
+## Kiến thức cần thiết
+
+-   Không cần phải biết hết mọi thứ, chỉ cần biết cơ bản là đủ rồi, còn lại sẽ học dần dần trong quá trình phát triển project. Khi nào rảnh rỗi thì đem laptop ra đọc và thực hành thêm.
+-   Prefer English over Vietnamese ;)
+
+### Ngôn ngữ cơ bản
+
+1. HTML là gì? Đọc thêm tại [W3Schools (English)](https://www.w3schools.com/html/).
+2. CSS là gì? Đọc thêm tại [W3Schools (English)](https://www.w3schools.com/css/).
+3. JavaScript là gì? Đọc thêm tại [W3Schools (English)](https://www.w3schools.com/js/).
+
+### Ngôn ngữ lập trình
+
+-   PHP là gì? Đọc thêm tại [W3Schools (English)](https://www.w3schools.com/php/).
+
+### Hiểu về framework sẽ sử dụng
+
+-   Laravel là gì? Đọc thêm tại [Laravel (English)](https://laravel.com/docs/11.x).
+-   VueJS là gì? Đọc thêm tại [VueJS (English)](https://vuejs.org/guide/introduction.html).
+-   TailwindCSS là gì? Đọc thêm tại [TailwindCSS (English)](https://tailwindcss.com/docs).
+-   InertiaJS là gì? Đọc thêm tại [InertiaJS (English)](https://inertiajs.com/).
+
+### Công cụ và môi trường phát triển
+
+-   Git là gì? Đọc thêm tại [Git (English)](https://git-scm.com/doc).
+-   Composer là gì? Đọc thêm tại [Composer (English)](https://getcomposer.org/doc/).
+-   Node.js là gì? Đọc thêm tại [Node.js (English)](https://nodejs.org/en/docs/).
+-   NPM là gì? Đọc thêm tại [NPM (English)](https://docs.npmjs.com/).
+-   VSCode là gì? Đọc thêm tại [VSCode (English)](https://code.visualstudio.com/docs).
+
+### Kiến thức bổ sung
+
+-   API là gì? Đọc thêm tại [W3Schools (English)](https://www.w3schools.com/whatis/whatis_api.asp).
+-   RESTful API là gì? Đọc thêm tại [RESTful API (English)](https://restfulapi.net/).
+-   MVC là gì? Đọc thêm tại [MVC (English)](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm).
